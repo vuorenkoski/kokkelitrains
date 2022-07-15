@@ -2,6 +2,7 @@ package fi.vuorenkoski.kokkelitrains;
 
 import static fi.vuorenkoski.kokkelitrains.R.color.colorPrimaryLight;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.ActionBar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
@@ -10,6 +11,7 @@ import android.os.StrictMode;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.ImageButton;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -31,6 +33,21 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setDisplayShowCustomEnabled(true);
+        getSupportActionBar().setCustomView(R.layout.custom_action_bar_layout);
+        View view =getSupportActionBar().getCustomView();
+
+        ImageButton imageButton= (ImageButton)view.findViewById(R.id.action_bar_info);
+
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, Info.class));
+            }
+        });
 
         AdapterView.OnItemSelectedListener eventListener = new AdapterView.OnItemSelectedListener() {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -53,7 +70,6 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
-        setContentView(R.layout.activity_main);
         if (android.os.Build.VERSION.SDK_INT > 9) // Tarvitaan nettiyhteyttä varten
         {
             StrictMode.ThreadPolicy policy = new
@@ -81,19 +97,6 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-    }
-
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.options_menu, menu);
-        return true;
-    }
-
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId()==R.id.info) {
-            startActivity(new Intent(this, Info.class));
-        }
-        return true;
     }
 
 }
