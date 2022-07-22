@@ -16,8 +16,18 @@
           android:scaleY="0.98"
           android:translateX="1.08"
           android:translateY="1.08">
-          <path android:fillColor="#88485D"
-                android:pathData="M0,0h108v108h-108z"/>
+        <group android:scaleX="0.98"
+            android:scaleY="0.98"
+            android:translateX="1.08"
+            android:translateY="1.08">
+          <group android:scaleX="0.98"
+              android:scaleY="0.98"
+              android:translateX="1.08"
+              android:translateY="1.08">
+              <path android:fillColor="#CCA7B2"
+                    android:pathData="M0,0h108v108h-108z"/>
+          </group>
+        </group>
       </group>
     </group>
   </group>
