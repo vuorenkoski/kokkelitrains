@@ -116,7 +116,7 @@
             android:textSize="10sp" />
 
         <TextView
-            android:text="Lähtö"
+            android:text="Lähtee"
             android:id="@+id/train_departure_time"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -140,7 +140,7 @@
             android:textSize="12sp" />
 
         <TextView
-            android:text="Saapuminen"
+            android:text="Saapuu"
             android:id="@+id/train_arrival_time"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
