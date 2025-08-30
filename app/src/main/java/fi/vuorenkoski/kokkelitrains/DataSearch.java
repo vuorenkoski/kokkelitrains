@@ -1,7 +1,5 @@
 package fi.vuorenkoski.kokkelitrains;
 
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
 import org.json.JSONArray;
 import java.net.URL;
 import java.text.DateFormat;
@@ -85,14 +83,4 @@ public class DataSearch {
         return trains.stream().sorted().collect(Collectors.toCollection(ArrayList::new));
     }
 
-    public static Target getCoordinates(int number) throws Exception {
-        URL url = new URL("https://rata.digitraffic.fi/api/v1/train-locations/latest/"+number);
-        Scanner fileReader = new Scanner(url.openStream());
-        JSONArray data=new JSONArray(fileReader.nextLine());
-        String speed=data.getJSONObject(0).getString("speed");
-        JSONArray location=data.getJSONObject(0).getJSONObject("location").getJSONArray("coordinates");
-        double xcor=location.getDouble(0);
-        double ycor=location.getDouble(1);
-        return new Target(new LatLng(ycor,xcor),speed);
-    }
 }

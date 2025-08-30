@@ -1,5 +1,10 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
+<!--    <style name="Base.Theme.KokkeliTrains" parent="Theme.Material3.DayNight.NoActionBar">
+    </style>
+
+    <style name="Theme.KokkeliTrains" parent="Base.Theme.KokkeliTrains" />
+-->
     <style name="Theme.KokkeliTrains" parent="Theme.MaterialComponents.Light.DarkActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/colorPrimaryDark</item>

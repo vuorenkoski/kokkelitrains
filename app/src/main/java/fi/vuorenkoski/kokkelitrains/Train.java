@@ -1,6 +1,5 @@
 package fi.vuorenkoski.kokkelitrains;
 
-import com.google.android.gms.maps.model.LatLng;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -20,7 +19,6 @@ public class Train implements Comparable<Train> {
     private String causes;
 
     private String speed;
-    private LatLng location;
 
     private int late;
 
@@ -41,7 +39,6 @@ public class Train implements Comparable<Train> {
         this.causes=causes;
 
         this.speed=null;
-        this.location=null;
     }
 
     public String getDepartureTimeStr() {
@@ -64,9 +61,6 @@ public class Train implements Comparable<Train> {
         return lineId;
     }
 
-    public LatLng getLocation() {
-        return location;
-    }
 
     public String getSpeed() {
         return speed;

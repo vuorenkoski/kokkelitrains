@@ -69,14 +69,14 @@
     </LinearLayout>
 
     <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="#000C0B0B"
-    android:divider="@color/colorPrimaryDark"
-    android:dividerPadding="16dp"
-    android:weightSum="23"
-    android:layout_marginTop="12dp"
-    android:orientation="horizontal">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000C0B0B"
+        android:divider="@color/colorPrimaryDark"
+        android:dividerPadding="16dp"
+        android:weightSum="23"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal">
         <TextView
             android:text="Juna"
             android:id="@+id/train_line_id"

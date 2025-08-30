@@ -12,7 +12,8 @@ public class Info extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info);
         TextView versionText = findViewById(R.id.versioView);
-        versionText.setText("Kökkelitrains, ver. "+BuildConfig.VERSION_NAME+" "+BuildConfig.BUILD_TYPE);
+        versionText.setText("Kökkelitrains, ver. 0.9.8 release");
+//        versionText.setText("Kökkelitrains, ver. "+BuildConfig.VERSION_NAME+" "+BuildConfig.BUILD_TYPE);
 
         View backButton = findViewById(R.id.backButton);
         backButton.setOnClickListener(new View.OnClickListener() {
