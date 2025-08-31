@@ -14,7 +14,7 @@
         android:orientation="horizontal"
         android:textAlignment="inherit"
         android:paddingLeft="16dp"
-        android:paddingTop="16dp"
+        android:paddingTop="32dp"
         android:paddingRight="16dp"
         android:paddingBottom="8dp"
         android:background="@color/colorPrimary">
